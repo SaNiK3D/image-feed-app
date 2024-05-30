@@ -86,9 +86,6 @@ struct FeedView: View {
             if let photo = selectedPhoto {
                 FullImageView(dataItem: photo.fullPhoto, didTapClose: { selectedPhoto = nil })
                     .zIndex(2)
-                    .onTapGesture {
-                        selectedPhoto = nil
-                    }
                     .transition(.opacity)
             }
         }

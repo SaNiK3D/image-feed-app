@@ -81,8 +81,6 @@ final class FeedViewModel {
 
     func handle(_ action: Action) async {
 
-        print(action)
-
         switch action {
             case .didAppear:
                 await loadPhotos()

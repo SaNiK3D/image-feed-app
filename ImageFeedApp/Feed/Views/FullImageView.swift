@@ -47,17 +47,26 @@ struct FullImageView: View {
                         Spacer()
                     }
 
-                    Button {
-                        didTapClose()
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .tint(.white)
-                            .font(.title)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                            .padding(8)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Button {
+                                didTapClose()
+                            } label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .tint(.white)
+                                    .font(.title)
+                                    .padding(8)
+                            }
+
+                            Spacer()
+                        }
+                        .padding(.leading)
+
+                        Spacer()
                     }
                 }
             }
+            .onTapGesture(perform: didTapClose)
     }
 }
 
